@@ -298,10 +298,9 @@ export default class Job {
                 recruiterTag: RECRUITER,
             }
         );
-
         return {
             jobs,
-            hasMorePage: !!content["pagination"]?.replace(/\n/g, ""),
+            hasMorePage: content.pagination !== "\n",
         };
     }
 
